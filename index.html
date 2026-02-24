@@ -116,6 +116,63 @@
                     'Use your banking app to toggle gambling transactions to OFF.'
                 ]
             },
+            pornography: {
+                id: 'pornography',
+                title: 'Digital Pornography',
+                color: 'bg-red-600',
+                textColor: 'text-red-700',
+                lightColor: 'bg-red-50',
+                summary: 'Driven by Anonymity, Accessibility, and Affordability, mobile devices provide a high-speed engine for compulsive content consumption.',
+                levels: { dopa: 98, cort: 45, oxy: 5 },
+                mechanics: [
+                    { title: 'Infinite Novelty', desc: 'The brain is wired for newness; endless scrolling ensures you never hit a natural stop.' },
+                    { title: 'Privacy & Isolation', desc: 'Personal devices remove the social barrier of being caught, fueling secret habits.' },
+                    { title: 'Click-to-Climax Speed', desc: 'The gap between an urge and consumption is now seconds, bypassing logic.' }
+                ],
+                tools: [
+                    'Change home router settings to use OpenDNS FamilyShield.',
+                    'Install accountability software like Covenant Eyes or Canopy.',
+                    'Practice the HALT method (Never scroll when Hungry, Angry, Lonely, or Tired).'
+                ]
+            },
+            gaming: {
+                id: 'gaming',
+                title: 'Mobile Gaming',
+                color: 'bg-indigo-600',
+                textColor: 'text-indigo-700',
+                lightColor: 'bg-indigo-50',
+                summary: 'Mobile games use "micro-transactions" and "daily habit loops" to turn every spare moment into a potential gaming session.',
+                levels: { dopa: 80, cort: 35, oxy: 20 },
+                mechanics: [
+                    { title: 'The Daily Loop', desc: 'Login bonuses punish you for skipping a day, turning a hobby into a daily chore.' },
+                    { title: 'Pay-to-Win', desc: 'Artificial hurdles are created that can only be cleared by spending real money on loot boxes.' },
+                    { title: 'Illusion of Progress', desc: 'Constant level-ups provide a false sense of achievement to numb real-world stress.' }
+                ],
+                tools: [
+                    'Unlink your credit card from the App Store to add "purchasing friction".',
+                    'Turn phone to Greyscale to make games look dull and less stimulating.',
+                    'Enable "Ask to Buy" on family accounts to prevent impulsive spending.'
+                ]
+            },
+            shopping: {
+                id: 'shopping',
+                title: 'Online Shopping',
+                color: 'bg-emerald-600',
+                textColor: 'text-emerald-700',
+                lightColor: 'bg-emerald-50',
+                summary: 'Frictionless payments and "package anticipation" turn boredom into a 24/7 digital marketplace habit.',
+                levels: { dopa: 85, cort: 40, oxy: 30 },
+                mechanics: [
+                    { title: 'Invisible Spending', desc: 'Digital numbers don\'t feel like real cash, masking the reality of growing debt.' },
+                    { title: 'Anticipation High', desc: 'The dopamine hit comes from the delivery notification, not the actual item.' },
+                    { title: 'One-Click Buying', desc: 'Technology like Apple Pay removes the logical "pause" before a purchase.' }
+                ],
+                tools: [
+                    'Delete saved credit card info from your phone and browser.',
+                    'Practice the 24-Hour Rule: Wait a full day before clicking "Buy".',
+                    'Try an "Analog Month" where all non-essential shopping must use physical cash.'
+                ]
+            },
             doomscrolling: {
                 id: 'doomscrolling',
                 title: 'Doomscrolling',
@@ -151,7 +208,7 @@
                 tools: [
                     'Switch phone to Greyscale mode to reduce allure.',
                     'Charge your phone in a different room overnight.',
-                    'Practice a "Sabbath Reset"Ñone full day per week without devices.'
+                    'Practice a "Sabbath Reset"—one full day per week without devices.'
                 ]
             }
         };
@@ -215,7 +272,7 @@
                     <ul class="space-y-4">
                         ${data.tools.map(t => `
                             <li class="flex items-start">
-                                <span class="text-emerald-400 mr-3">?</span>
+                                <span class="text-emerald-400 mr-3">✓</span>
                                 <span class="text-slate-300">${t}</span>
                             </li>
                         `).join('')}
