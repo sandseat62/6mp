@@ -1,127 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Church Without Curtains | Digital Health for the Church</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraceWired Hub | Digital Health for the Church</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
 
-body {
-font-family: 'Inter', sans-serif;
-scroll-behavior: smooth;
-}
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
 
-.scrollbar-hide::-webkit-scrollbar {
-display: none;
-}
+        .tab-active {
+            transform: scale(1.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
 
-.tab-active {
-transform: scale(1.05);
-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
 
-.fade-in {
-animation: fadeIn 0.5s ease-out forwards;
-}
-
-@keyframes fadeIn {
-from { opacity: 0; transform: translateY(10px); }
-to { opacity: 1; transform: translateY(0); }
-}
-</style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-<!-- Header -->
-<header class="bg-white border-b border-slate-200 sticky top-0 z-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-<div class="flex items-center space-x-3">
-<div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center shadow-inner">
-<span class="text-white font-bold text-xl">GCC</span>
-</div>
-<div>
-<h1 class="text-xl font-bold leading-none text-slate-800">A Church Without Curtains</h1>
-<span class="text-[10px] font-semibold text-slate-500 uppercase tracking-widest">Grace Community Church</span>
-</div>
-</div>
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center shadow-inner">
+                    <span class="text-white font-bold text-xl">GCC</span>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold leading-none text-slate-800">Church Without Curtains</h1>
+                    <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-widest">Grace Community Church</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-4">
+                <span class="text-sm font-medium text-slate-500">Need to talk?</span>
+                <button class="bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+                    Contact Pastoral Care
+                </button>
+            </div>
+        </div>
+    </header>
 
-<div class="hidden md:flex items-center space-x-4">
-<span class="text-sm font-medium text-slate-500">Need to talk?</span>
-<button class="bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
-Contact Pastoral Care
-</button>
-</div>
-</div>
-</header>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Hero Section -->
+        <div class="max-w-3xl mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Taking Back Our Time</h2>
+            <p class="text-lg text-slate-600 leading-relaxed">
+                Technology should help us, but many apps are made to keep us hooked. Use this guide to understand how your phone affects you and find simple ways to build better habits by the renewal of our minds. We must recognize that people are not just using tools...they are being used by them! These platforms are engineered to bypass the conscious mind and hack the human brain for profit. To move from a culture of digital secrecy to one of authentic presence, we require a structured, church-led intervention. This is the heart of the "Church Without Curtains" movement: pulling back the veil of digital dependency to reveal the person God intended us to be.
+            </p>
+        </div>
 
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <!-- Navigation Tabs -->
+        <nav id="mainNav" class="flex flex-row gap-2 mb-8 mt-4 overflow-x-auto pb-4 scrollbar-hide w-full">
+            <!-- Navigation buttons will be injected here by JS -->
+        </nav>
 
-<!-- Hero Section -->
-<div class="max-w-3xl mb-8">
-<h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Transformed by Renewing Our Minds</h2>
-<p class="text-lg text-slate-600 leading-relaxed">
-Technology should help us, but many apps are made to keep us hooked. Use this guide to understand how your phone affects you and find simple ways to build better habits by the renewal of our minds. We must recognize that people are not just using tools...they are being used by them! These platforms are engineered to bypass the conscious mind and hack the human brain for profit. To move from a culture of digital secrecy to one of authentic presence, we require a structured, church-led intervention. This is the heart of the "Church Without Curtains" movement: pulling back the veil of digital dependency to reveal the person God intended us to be
-</p>
-</div>
+        <!-- Dynamic Content Area -->
+        <div id="contentArea" class="fade-in">
+            <!-- Content will be injected here by JS -->
+        </div>
 
-<!-- Navigation Tabs -->
-<nav id="mainNav" class="flex flex-row gap-2 mb-8 mt-4 overflow-x-auto pb-4 scrollbar-hide w-full">
-<!-- Navigation buttons will be injected here by JS -->
-</nav>
+    </main>
 
-<!-- Dynamic Content Area -->
-<div id="contentArea" class="fade-in">
-<!-- Content will be injected here by JS -->
-</div>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 text-center border-t border-slate-800 mt-12">
+        <div class="max-w-4xl mx-auto px-6">
+            <h4 class="text-white font-bold text-lg mb-4">Grace Community Church</h4>
+            <p class="text-sm mb-6 leading-relaxed">
+                This guide is here to help you learn about digital health. If you are struggling, please reach out to our Church Without Curtains team or a professional counselor.
+            </p>
+            <div class="flex justify-center space-x-4 text-xs font-semibold tracking-wider uppercase">
+                <span class="hover:text-white cursor-pointer transition-colors">Privacy</span>
+                <span>&bull;</span>
+                <span class="hover:text-white cursor-pointer transition-colors">Resources</span>
+                <span>&bull;</span>
+                <span class="hover:text-white cursor-pointer transition-colors">Contact</span>
+            </div>
+        </div>
+    </footer>
 
-</main>
+    <script>
+        const hubData = {
+            gambling: {
+                id: 'gambling',
+                title: 'Mobile Gambling',
+                color: 'bg-orange-500',
+                textColor: 'text-orange-700',
+                lightColor: 'bg-orange-50',
+                summary: 'The "Pocket Casino" has removed all travel time and closing hours from betting, creating a highly addictive trance-like state. For a long time, I treated sports betting like it was just a way to make the game more interesting, but it turned into something much darker. I found myself chasing that one big parlay to fix our finances or to give me a win when work felt like a grind. The science tells us our brains actually get a bigger hit of dopamine from the "maybe" than the actual win. We get hooked on the "near-miss," thinking we’re just one lucky break away from everything being okay. But the truth is, I was trading my family’s security for a digital rush.',
+                levels: { dopa: 95, cort: 30, oxy: 10 },
+                mechanics: [
+                    { title: 'Zero Barriers', desc: 'No travel time or closing hours. Bet from anywhere, anytime.' },
+                    { title: 'The Trance', desc: 'High-def colors and vibrations create a "flow state" that ignores the value of money.' },
+                    { title: 'Gamification', desc: 'Streaks and rewards make real betting feel like a harmless game.' }
+                ],
+                tools: [
+                    'Turn off all gambling app notifications.',
+                    'Install blocks like BetBlocker or Gamban.',
+                    'Use your banking app to toggle gambling transactions to OFF.'
+                ]
+            },
+            pornography: {
+                id: 'pornography',
+                title: 'Digital Pornography',
+                color: 'bg-red-600',
+                textColor: 'text-red-700',
+                lightColor: 'bg-red-50',
+                summary: 'Driven by Anonymity, Accessibility, and Affordability, mobile devices provide a high-speed engine for compulsive content consumption. If you feel like you’re losing your taste for real life, we want you to know you are not alone.  You are NOT a project to be fixed - you have been caught in a chemical loop.  But we do not have to stay in the dark. In a Church Without Curtains, we are building a bridge from SHAME back to GRACE. We recognize that the screen is often just a symptom of a deeper squeeze — maybe you are feeling powerless, lonely, or just plain tired. But you do NOT have to fight this alone.',
+                levels: { dopa: 98, cort: 45, oxy: 5 },
+                mechanics: [
+                    { title: 'Infinite Novelty', desc: 'The brain is hardwired for newness; endless scrolling ensures you never hit a natural stop.' },
+                    { title: 'Privacy & Isolation', desc: 'Personal devices remove the social barrier of "getting caught," fueling secret habits.' },
+                    { title: 'Click-to-Climax Speed', desc: 'The time between an urge and consumption is now seconds, bypassing logic.' }
+                ],
+                tools: [
+                    'Change home router settings to use OpenDNS FamilyShield.',
+                    'Install accountability software like Covenant Eyes or Canopy.',
+                    'Practice the HALT method (Never scroll when Hungry, Angry, Lonely, or Tired).'
+                ]
+            },
+            gaming: {
+                id: 'gaming',
+                title: 'Mobile Gaming',
+                color: 'bg-indigo-600',
+                textColor: 'text-indigo-700',
+                lightColor: 'bg-indigo-50',
+                summary: 'Mobile games use "micro-transactions" and "daily habit loops" to turn every spare moment into a potential gaming session.',
+                levels: { dopa: 80, cort: 35, oxy: 20 },
+                mechanics: [
+                    { title: 'The Daily Loop', desc: 'Login bonuses punish you for skipping a day, turning a hobby into a daily chore.' },
+                    { title: 'Pay-to-Win', desc: 'Artificial hurdles are created that can only be cleared by spending real money on loot boxes.' },
+                    { title: 'Illusion of Progress', desc: 'Constant level-ups provide a false sense of achievement to numb real-world stress.' }
+                ],
+                tools: [
+                    'Unlink your credit card from the App Store to add "purchasing friction".',
+                    'Turn phone to Greyscale to make games look dull and less stimulating.',
+                    'Enable "Ask to Buy" on family accounts to prevent impulsive spending.'
+                ]
+            },
+            shopping: {
+                id: 'shopping',
+                title: 'Online Shopping',
+                color: 'bg-emerald-600',
+                textColor: 'text-emerald-700',
+                lightColor: 'bg-emerald-50',
+                summary: 'Frictionless payments and "package anticipation" turn boredom into a 24/7 digital marketplace habit.',
+                levels: { dopa: 85, cort: 40, oxy: 30 },
+                mechanics: [
+                    { title: 'Invisible Spending', desc: 'Digital numbers don\'t feel like real cash, masking the reality of growing debt.' },
+                    { title: 'Anticipation High', desc: 'The dopamine hit comes from the delivery notification, not the actual item.' },
+                    { title: 'One-Click Buying', desc: 'Technology like Apple Pay removes the logical "pause" before a purchase.' }
+                ],
+                tools: [
+                    'Delete saved credit card info from your phone and browser.',
+                    'Practice the 24-Hour Rule: Wait a full day before clicking "Buy".',
+                    'Try an "Analog Month" where all non-essential shopping must use physical cash.'
+                ]
+            },
+            doomscrolling: {
+                id: 'doomscrolling',
+                title: 'Doomscrolling',
+                color: 'bg-slate-700',
+                textColor: 'text-slate-800',
+                lightColor: 'bg-slate-100',
+                summary: 'Continuously scrolling through bad news in a misguided attempt to "stay informed," leading to chronic mental fatigue.',
+                levels: { dopa: 40, cort: 95, oxy: 15 },
+                mechanics: [
+                    { title: 'Safety Paradox', desc: 'We scroll to feel safe, but the never-ending feed keeps the brain in alarm mode.' },
+                    { title: 'Negative Bias', desc: 'Algorithms push fear because it generates the most clicks.' },
+                    { title: 'Cognitive Tunneling', desc: 'Focus narrows until you lose awareness of time and surroundings.' }
+                ],
+                tools: [
+                    'Set a 20-minute daily limit for news.',
+                    'For every minute of news, spend two minutes in Scripture.',
+                    'Switch to a weekly printed newspaper with a clear "end".'
+                ]
+            },
+            social: {
+                id: 'social',
+                title: 'Social Media',
+                color: 'bg-pink-500',
+                textColor: 'text-pink-700',
+                lightColor: 'bg-pink-50',
+                summary: 'A state of "continuous partial attention" where our minds are tethered to digital standing rather than physical presence.',
+                levels: { dopa: 85, cort: 40, oxy: 90 },
+                mechanics: [
+                    { title: 'Validation Loop', desc: 'Every like is a digital pat on the back, creating a need for external approval.' },
+                    { title: 'The Ghost Presence', desc: 'Comparing our messy reality to others curated highlight reels.' },
+                    { title: 'Variable Rewards', desc: 'Notifications are unpredictable, creating a slot-machine effect.' }
+                ],
+                tools: [
+                    'Switch phone to Greyscale mode to reduce allure.',
+                    'Charge your phone in a different room overnight.',
+                    'Practice a "Sabbath Reset"—one full day per week without devices.'
+                ]
+            }
+        };
 
-<!-- Footer -->
-<footer class="bg-slate-900 text-slate-400 py-12 text-center border-t border-slate-800 mt-12">
-<div class="max-w-4xl mx-auto px-6">
-<h4 class="text-white font-bold text-lg mb-4">Grace Community Church</h4>
-<p class="text-sm mb-6 leading-relaxed">
-This guide is here to help you learn about digital health. If you are struggling, please reach out to our team or a professional counselor.
-</p>
-<div class="flex justify-center space-x-4 text-xs font-semibold tracking-wider uppercase">
-<span class="hover:text-white cursor-pointer transition-colors">Privacy</span>
-<span>&bull;</span>
-<span class="hover:text-white cursor-pointer transition-colors">Resources</span>
-<span>&bull;</span>
-<span class="hover:text-white cursor-pointer transition-colors">Contact</span>
-</div>
-</div>
-</footer>
+        let currentTab = 'gambling';
 
-<script>
-const hubData = {
-gambling: {
-id: 'gambling',
-title: 'Mobile Gambling',
-color: 'bg-orange-500',
-textColor: 'text-orange-700',
-lightColor: 'bg-orange-50',
-summary: 'The "Pocket Casino" has removed all travel time and closing hours from betting, creating a highly addictive trance-like state. For a long time, I treated sports betting like it was just a way to make the game more interesting, but it turned into something much darker. I found myself chasing that one big parlay to fix our finances or to give me a win when work felt like a grind. The science tells us our brains actually get a bigger hit of dopamine from the "maybe" than the actual win. We get hooked on the "near-miss," thinking we’re just one lucky break away from everything being okay. But the truth is, I was trading my family’s security for a digital rush.',
-levels: { dopa: 95, cort: 30, oxy: 10 },
-mechanics: [
-{ title: 'Zero Barriers', desc: 'No travel time or closing hours. Bet from anywhere, anytime.' },
-{ title: 'The Trance', desc: 'High-def colors and vibrations create a "flow state" that ignores the value of money.' },
-{ title: 'Gamification', desc: 'Streaks and rewards make real betting feel like a harmless game.' }
-],
-tools: [
-'Turn off all gambling app notifications.',
-'Install blocks like BetBlocker or Gamban.',
-'Use your banking app to toggle gambling transactions to OFF.'
-]
-},
-pornography: {
-id: 'pornography',
-title: 'Digital Pornography',
-color: 'bg-red-600',
-textColor: 'text-red-700',
-lightColor: 'bg-red-50',
-                summary:'Driven by Anonymity, Accessibility, and Affordability, mobile devices provide a high-speed engine for compulsive content consumption. If you feel like you’re losing your taste for real life, we want you to know you are not alone.  You are NOT a project to be fixed - you have been caught in a chemical loop.  But we do not have to stay in the dark. In a Church Without Curtains, we are building a bridge from SHAME back to GRACE. We recognize that the screen is often just a symptom of a deeper squeeze — maybe you are feeling powerless, lonely, or just plain tired. But you do NOT have to fight this alone.',
-mechanics: [
-{ title: 'Infinite Novelty', desc: 'The brain is hardwired for newness; endless scrolling ensures you never hit a natural stop.' },
+        function renderNav() {
+            const nav = document.getElementById('mainNav');
+            nav.innerHTML = Object.values(hubData).map(item => `
+                <button onclick="switchTab('${item.id}')" class="flex items-center whitespace-nowrap px-4 py-3 rounded-xl transition-all font-medium text-sm ${currentTab === item.id ? item.color + ' text-white tab-active' : 'bg-white text-slate-600 border border-slate-200'}">
+                    ${item.title}
+                </button>
+            `).join('');
+        }
+
+        function switchTab(id) {
+            currentTab = id;
+            renderNav();
+            renderContent();
+        }
+
+        function renderContent() {
+            const data = hubData[currentTab];
+            const content = document.getElementById('contentArea');
+            
+            content.innerHTML = `
+                <div class="${data.color} rounded-3xl p-8 md:p-12 text-white mb-8 shadow-lg fade-in">
+                    <h2 class="text-4xl font-bold mb-4">${data.title}</h2>
+                    <p class="text-lg opacity-90 max-w-2xl">${data.summary}</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    <!-- Brain Section -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8 h-full">
+                        <h3 class="text-xl font-bold mb-6 flex items-center">
+                            <span class="${data.textColor}">The Digital Brain</span>
+                        </h3>
+                        <div class="space-y-4">
+                            ${renderBar('Dopamine', data.levels.dopa, 'bg-blue-500')}
+                            ${renderBar('Cortisol', data.levels.cort, 'bg-red-500')}
+                            ${renderBar('Oxytocin', data.levels.oxy, 'bg-pink-500')}
+                        </div>
+                    </div>
+
+                    <!-- Mechanics Section -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8">
+                        <h3 class="text-xl font-bold mb-6 ${data.textColor}">How Apps Trick Us</h3>
+                        <div class="space-y-4">
+                            ${data.mechanics.map(m => `
+                                <div>
+                                    <h4 class="font-bold text-slate-800">${m.title}</h4>
+                                    <p class="text-sm text-slate-600">${m.desc}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 text-white rounded-3xl p-8 md:p-12">
+                    <h3 class="text-2xl font-bold mb-6 text-emerald-400">Practical Recovery Tools</h3>
+                    <ul class="space-y-4">
+                        ${data.tools.map(t => `
+                            <li class="flex items-start">
+                                <span class="text-emerald-400 mr-3">✓</span>
+                                <span class="text-slate-300">${t}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+
+        function renderBar(label, level, color) {
+            return `
+                <div class="mb-3">
+                    <div class="flex justify-between text-xs font-bold text-slate-500 mb-1 uppercase">
+                        <span>${label}</span>
+                        <span>${level}%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2">
+                        <div class="${color} h-2 rounded-full transition-all duration-1000" style="width: ${level}%"></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initialize
+        renderNav();
+        renderContent();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
